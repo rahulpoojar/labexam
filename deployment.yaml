@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: book
+  name: phplabapp
   labels:
-    app: book
+    app: phplabapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: book
+      app: phplabapp
   template:
     metadata:
       labels:
-        app: book
+        app: phplabapp
     spec:
       containers:
-      - name: book
-        image: gaganahs/phpapp:latest
+      - name: phplabapp
+        image: rahulpoojar/phplab:v1
         ports:
         - containerPort: 80
